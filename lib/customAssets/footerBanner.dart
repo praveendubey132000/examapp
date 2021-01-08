@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 class FooterBanner extends StatefulWidget {
   @override
@@ -11,6 +12,7 @@ class _FooterBannerState extends State<FooterBanner> {
     return Opacity(
       opacity: 0.3,
       child: Container(
+
         width: MediaQuery.of(context).size.width,
        // color: Colors.red,
         height: MediaQuery.of(context).size.height*.3,

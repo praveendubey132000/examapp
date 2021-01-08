@@ -41,6 +41,11 @@ Future <String> singInWithEmailAndPassword(String email,String password) async{
 
 }
 
+//user data
+  Future getUserData()async{
+    return await FirebaseAuth.instance.currentUser;
+  }
+
 //logout user
 singOut(){
     return _firebaseAuth.signOut();

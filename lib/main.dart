@@ -1,11 +1,15 @@
 import 'package:examapp/Screens/DashBoard.dart';
+import 'package:examapp/Screens/mainScreen.dart';
 import 'package:examapp/Screens/signIn.dart';
+import 'package:examapp/Screens/singleExamScreen.dart';
 import 'package:examapp/Screens/splashScreen.dart';
 import 'package:examapp/customAssets/banner.dart';
 import 'package:examapp/service/auth_service.dart';
 import 'package:examapp/widgetProvider/widgetprovider.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+
+import 'Screens/assignedExamScreen.dart';
 
 void main() async{
   WidgetsFlutterBinding.ensureInitialized();
@@ -36,7 +40,7 @@ class HomeController extends StatelessWidget{
         builder: (context, AsyncSnapshot<String> snapshot){
           if(snapshot.connectionState==ConnectionState.active){
             final bool signedIn=snapshot.hasData;
-            return signedIn?DashBoard():SignIN();
+            return signedIn?SingleExamScreen("test exam"):SignIN();
           }
           return CircularProgressIndicator();
         });
