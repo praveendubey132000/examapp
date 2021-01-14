@@ -52,7 +52,7 @@ class _AboutTabState extends State<AboutTab> with AutomaticKeepAliveClientMixin 
               children: [Icon(Icons.score_outlined),SizedBox(width: 20,),Column(children: [Text("Your Score"),Text("Not Yet Appeared for Exam")],)],
             ),
           ),
-          Customb
+          
         ],
       ),
     );
